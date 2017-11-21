@@ -25,7 +25,7 @@ var config = {
 
 var database = firebase.database();
 
-$('submit-tree').submit(function(event) {
+$('#submit-tree').submit(function(event) {
 
   event.preventDefault();
 
