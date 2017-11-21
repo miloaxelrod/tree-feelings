@@ -1,4 +1,12 @@
-
+var config = {
+    apiKey: "AIzaSyCGzn1CPde1U0_QgbM7FPaqMR-Fgv550wM",
+    authDomain: "tree-feelings.firebaseapp.com",
+    databaseURL: "https://tree-feelings.firebaseio.com",
+    projectId: "tree-feelings",
+    storageBucket: "tree-feelings.appspot.com",
+    messagingSenderId: "359833217111"
+  };
+  firebase.initializeApp(config);
 
  $(document).ready(function() {
 
