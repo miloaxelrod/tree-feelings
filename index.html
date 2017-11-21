@@ -1,0 +1,102 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tree Feelings</title>
+
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyCGzn1CPde1U0_QgbM7FPaqMR-Fgv550wM",
+          authDomain: "tree-feelings.firebaseapp.com",
+          databaseURL: "https://tree-feelings.firebaseio.com",
+          projectId: "tree-feelings",
+          storageBucket: "tree-feelings.appspot.com",
+          messagingSenderId: "359833217111"
+        };
+        firebase.initializeApp(config);
+      </script>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="index.html">Tree Feelings</a>
+      </div>
+      <form class="searchbox" action="">
+        <textarea id="searchbox-text" type="text" class="searchbox-int"></textarea>
+        <button class="searchbox-btn">Search</button>
+      </form>
+    </header>
+    <div class="page">
+      <div id="browse-trees">
+
+        <!-- This will be removed from the html and inserted with javascript -->
+        <a href="[url with tree name]">
+          <div class="tree-thumb">
+            <div class="thumb-image">
+              <img src="[insert img url]" alt="image of [insert tree name]" />
+            </div>
+            <div class="thumb-name">
+              [insert tree name]
+            </div>
+          </div>
+        </a>
+        <!-- end tree listing -->
+
+              <div class="tree-thumb">
+                <div class="thumb-image">
+                  <img src="[insert img url]" alt="image of [insert tree name]" />
+                </div>
+                <div class="thumb-name">
+                  [insert tree name]
+                </div>
+              </div>
+                    <div class="tree-thumb">
+                      <div class="thumb-image">
+                        <img src="[insert img url]" alt="image of [insert tree name]" />
+                      </div>
+                      <div class="thumb-name">
+                        [insert tree name]
+                      </div>
+                    </div>
+                          <div class="tree-thumb">
+                            <div class="thumb-image">
+                              <img src="[insert img url]" alt="image of [insert tree name]" />
+                            </div>
+                            <div class="thumb-name">
+                              [insert tree name]
+                            </div>
+                          </div>
+                                <div class="tree-thumb">
+                                  <div class="thumb-image">
+                                    <img src="[insert img url]" alt="image of [insert tree name]" />
+                                  </div>
+                                  <div class="thumb-name">
+                                    [insert tree name]
+                                  </div>
+                                </div>
+                                      <div class="tree-thumb">
+                                        <div class="thumb-image">
+                                          <img src="[insert img url]" alt="image of [insert tree name]" />
+                                        </div>
+                                        <div class="thumb-name">
+                                          [insert tree name]
+                                        </div>
+                                      </div>
+
+      </div>
+    </div>
+    <footer>
+      <div class="footer-left">
+        By Milo
+      </div>
+      <div class="footer-right">
+        YEAH
+      </div>
+    </footer>
+  </body>
+</html>

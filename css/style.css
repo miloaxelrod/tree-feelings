@@ -1,0 +1,197 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  border: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 65px;
+  margin-bottom: 30px;
+}
+
+.title {
+font-size: 60px;
+text-transform: uppercase;
+}
+
+
+
+.searchbox {
+  border: 1px solid;
+  height: 30px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchbox-int {
+  width: 220px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.searchbox-btn {
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  border: 0px solid;
+}
+
+
+footer {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-left {
+  width: 50%;
+}
+
+.footer-right {
+  width: 50%;
+  text-align: right;
+}
+
+
+.page {
+  border: 1px solid;
+  height: calc(100vh - 65px);
+  overflow: scroll;
+}
+
+#browse-trees {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: flex-start;
+}
+
+
+
+.tree-thumb {
+  display: block;
+  height: 230px;
+  width: 230px;
+  margin: 20px 20px 0;
+  border: 1px solid;
+  align-items: center;
+}
+
+.tree-thumb .thumb-image {
+  width: 220px;
+  height: 175px;
+  border: 1px solid;
+}
+
+
+
+
+.narrow-body {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.basic-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.basic-info .tree-name {
+  padding-right: 30px;
+}
+
+.basic-info .tree-name #common-name {
+  font-size: 45px;
+}
+
+.basic-info .tree-name #scientific-name {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.basic-info .tree-pic {
+  width: 200px;
+  height: 200px;
+}
+
+.basic-info .tree-pic img {
+  width: auto;
+  height: 100%;
+}
+
+
+
+#entries {
+  font-size: 18px;
+}
+
+#add-entry {
+  width: 100%;
+  height: 50px;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 30px;
+}
+
+#entries .entry-container {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid;
+}
+
+#entries .entry-container .feeling-type {
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+  color: #909090;
+}
+
+#entries .entry-container .entry-content {
+  margin-bottom: 10px;
+  line-height: 1.3em;
+}
+
+#entries .entry-container .entry-credit {
+  color: #909090;
+  text-align: right;
+}
+
+
+
+#submit-feeling {
+  margin: 0 auto;
+  width: 300px;
+  display: none;
+}
+
+#submit-feeling .label {
+  padding: 15px 0 7px;
+}
+
+#submit-feeling .feeling-type {
+  width: 300px;
+}
+
+#submit-feeling textarea {
+  width: 300px;
+}
+
+#submit-feeling .textarea-feeling {
+  width: 300px;
+  height: 150px;
+}
+
+#submit-feeling .submit-container {
+  font-size: 28px;
+  padding-top: 15px;
+}
+
+#submit-feeling .submit-button {
+  width: 300px;
+}
