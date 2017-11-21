@@ -8,18 +8,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="js/scripts.js"></script>
       <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-      <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyCGzn1CPde1U0_QgbM7FPaqMR-Fgv550wM",
-          authDomain: "tree-feelings.firebaseapp.com",
-          databaseURL: "https://tree-feelings.firebaseio.com",
-          projectId: "tree-feelings",
-          storageBucket: "tree-feelings.appspot.com",
-          messagingSenderId: "359833217111"
-        };
-        firebase.initializeApp(config);
-      </script>
   </head>
   <body>
     <header>
@@ -33,17 +21,17 @@
     </header>
     <div class="page narrow-body">
 
-      <form id="submit-tree">
+      <form action="" id="submit-tree">
         <div class="label">
           Tree Name:
         </div>
-        <textarea name="tree-name" class="textarea-tree-name"></textarea>
+        <textarea type="text" id="new-tree-name"></textarea>
         <div class="label">
           Tree ID:
         </div>
-        <textarea name="tree-id" class="textarea-tree-id"></textarea>
+        <textarea type="text" id="new-tree-id"></textarea>
         <div class="submit-container">
-          <input type="submit" value="Submit" class="submit-button" />
+          <button class="add-new-tree">Add New Tree</button>
         </div>
       </form>
 

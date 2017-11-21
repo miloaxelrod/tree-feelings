@@ -15,6 +15,24 @@
   > display the feeling
 */
 
+var database = firebase.database();
+
+$('submit-tree').submit(function(event) {
+
+  event.preventDefault();
+
+  var treeName = $('#new-tree-name').val();
+  var treeId = $('#new-tree-id').val();
+
+  $('#new-tree-name').val('');
+  $('#new-tree-id').val('');
+
+  var treeReference = database.ref('trees')
+  treeReference.push({
+    treeName: treeName,
+    treeId: treeId
+  });
+});
 
 /* search box */
 
