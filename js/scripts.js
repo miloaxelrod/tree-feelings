@@ -15,9 +15,12 @@ var config = {
 /*
   > create a little form to enter a couple forms about a trees
   > save it to firebase
-
   > manually add five tree ids
+
   > call api by random id (of those five)
+    > read each treeId from the database
+    > put them in an array
+    > use some math to pick a random one
   > display name and image for that tree
   > add a feeling
   > display the feeling
@@ -41,6 +44,22 @@ $('#submit-tree').submit(function(event) {
     treeId: treeId
   });
 });
+
+
+var root = 'http://eol.org/api/pages/1.0.json?batch=false&id=';
+var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
+
+var searchTreeId = 1061748;
+
+$.ajax({
+  url: root + searchTreeId + searchSettings,
+  method: 'GET'
+}).then(function(data) {
+  var treeInfo = data.results;
+  console.log('data');
+})
+
+
 
 /* search box */
 
