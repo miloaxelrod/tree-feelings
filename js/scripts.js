@@ -25,7 +25,6 @@ var config = {
   > add a feeling
   > display the feeling
 */
-console.log("3");
 
 var database = firebase.database();
 
@@ -45,11 +44,12 @@ $('#submit-tree').submit(function(event) {
     treeId: treeId
   });
 });
-console.log("1");
 
 $('#show-tree').on('click', function(event){
-  console.log('nice');
   event.preventDefault();
+
+  $('#tree-pic').empty();
+  $('#scientific-name').empty();
 
   var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
   var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
@@ -64,10 +64,12 @@ $('#show-tree').on('click', function(event){
     var treeInfo = data.results;
 
     console.log(data);
-    console.log('ok!');
-    console.log(data.dataObjects.2.mediaURL)
+    console.log('yes!');
+    console.log(data.dataObjects[2].mediaURL)
 
-    $('#put-it-here').append("boop");
+    $('#tree-pic').append("<img src=" + data.dataObjects[2].mediaURL + "/>");
+
+    $('#scientific-name').append(data.scientificName);
   });
 
 });
