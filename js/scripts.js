@@ -64,6 +64,7 @@ $('#show-tree').on('click', function(event){
 
   $('#tree-pic').empty();
   $('#scientific-name').empty();
+  $('#common-name').empty();
 
   var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
   var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
@@ -78,11 +79,28 @@ $('#show-tree').on('click', function(event){
     var treeInfo = data.results;
 
     console.log(data);
-    console.log(data.dataObjects[2].mediaURL)
 
     $('#tree-pic').append("<img src=" + data.dataObjects[2].mediaURL + "/>");
 
+console.log("dap");
     $('#scientific-name').append(data.scientificName);
+
+console.log("deep");
+    data.vernacularNames.getKeyValue = function(value){
+      for(var language in this){
+        if (this.hasOwnProperty(language)){
+          if (this[language] == value);
+          console.log("doop"); //works!!!
+          console.log(parentNode.vernacularName); //doesn't work, I believe because I'm actually grabbing EVERY key with the matching value, not just the first
+          return this.parent.vernacularName; //doesn't work
+        };
+      };
+    };
+
+    console.log("dip");
+    var commonName = data.vernacularNames.getKeyValue('en');
+
+    $('#common-name').append(commonName);
   });
 
 });
