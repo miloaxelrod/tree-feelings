@@ -61,10 +61,10 @@ $('#show-tree').on('click', function(event){
     var treeInfo = data.results;
 
     console.log(data);
-    console.log('yes!');
-    console.log(data.dataObjects)
+    console.log('ok!');
+    console.log(data.dataObjects.2.mediaURL)
 
-    $('#put-it-here').append("beep");
+    $('#put-it-here').append("boop");
   });
 
 });
