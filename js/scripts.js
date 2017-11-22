@@ -45,7 +45,8 @@ $('#submit-tree').submit(function(event) {
   });
 });
 
-$('#show-tree').on('click', function(){
+$('#show-tree').on('click', function(event){
+  event.preventDefault();
 
   var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
   var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
