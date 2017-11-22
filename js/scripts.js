@@ -47,12 +47,12 @@ $('#submit-tree').submit(function(event) {
 
 console.log('test1');
 
-var root = 'http://eol.org/api/pages/1.0.json?batch=false&id=';
+var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
 var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
 
 var searchTreeId = 1061748;
 
-console.log('test2');
+console.log('test2boop');
 
 $.ajax({
   url: root + searchTreeId + searchSettings,
