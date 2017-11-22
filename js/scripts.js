@@ -44,8 +44,10 @@ $('#submit-tree').submit(function(event) {
     treeId: treeId
   });
 });
+console.log("1");
 
 $('#show-tree').on('click', function(event){
+  console.log('nice');
   event.preventDefault();
 
   var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
