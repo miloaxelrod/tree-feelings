@@ -59,7 +59,7 @@ $.ajax({
   method: 'GET'
 }).then(function(data) {
   var treeInfo = data.results;
-  console.log('treeInfo');
+  console.log(treeInfo);
   console.log('test3');
 });
 
