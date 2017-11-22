@@ -86,6 +86,7 @@ console.log("dap");
     $('#scientific-name').append(data.scientificName);
 
 console.log("deep");
+
     data.vernacularNames.getKeyValue = function(value){
       for(var language in this){
         if (this.hasOwnProperty(language)){
