@@ -62,8 +62,9 @@ $('#show-tree').on('click', function(event){
 
     console.log(data);
     console.log('yes!');
+    console.log(data.dataObjects)
 
-    $('#put-it-here').append(data);
+    $('#put-it-here').append("beep");
   });
 
 });
