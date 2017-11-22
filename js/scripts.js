@@ -25,6 +25,7 @@ var config = {
   > add a feeling
   > display the feeling
 */
+console.log("3");
 
 var database = firebase.database();
 
