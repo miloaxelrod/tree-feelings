@@ -26,6 +26,7 @@ var config = {
   > display the feeling
 */
 
+/* Puts trees in the database manually */
 var database = firebase.database();
 
 $('#submit-tree').submit(function(event) {
@@ -44,6 +45,19 @@ $('#submit-tree').submit(function(event) {
     treeId: treeId
   });
 });
+
+/* Retrieves trees from the databse and stores them in allTrees */
+function getTrees() {
+  var treeRef = database.ref('trees');
+
+  treeRef.on('value', function(results){
+    var allTrees = results.val();
+    console.log(allTrees);
+  });
+};
+getTrees();
+
+
 
 $('#show-tree').on('click', function(event){
   event.preventDefault();
@@ -64,7 +78,6 @@ $('#show-tree').on('click', function(event){
     var treeInfo = data.results;
 
     console.log(data);
-    console.log('yes!');
     console.log(data.dataObjects[2].mediaURL)
 
     $('#tree-pic').append("<img src=" + data.dataObjects[2].mediaURL + "/>");
