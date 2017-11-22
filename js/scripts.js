@@ -58,7 +58,7 @@ function getTrees() {
 getTrees();
 
 
-
+/* Click to load a random tree's info */
 $('#show-tree').on('click', function(event){
   event.preventDefault();
 
