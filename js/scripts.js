@@ -45,27 +45,24 @@ $('#submit-tree').submit(function(event) {
   });
 });
 
-console.log('test1');
+$('#show-tree').on('click', function(){
 
-var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
-var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
+  var root = 'https://eol.org/api/pages/1.0.json?batch=false&id=';
+  var searchSettings = '&maps_page=1&texts_per_page=2&texts_page=1&subjects=overview&licenses=all&details=true&common_names=true&synonyms=true&references=true&taxonomy=true&vetted=0&cache_ttl=&language=en'
 
-var searchTreeId = 1061748;
+  var searchTreeId = 1061748;
 
-console.log('test2boop');
 
-$.ajax({
-  url: root + searchTreeId + searchSettings,
-  method: 'GET'
-}).then(function(data) {
-  var treeInfo = data.results;
+  $.ajax({
+    url: root + searchTreeId + searchSettings,
+    method: 'GET'
+  }).then(function(data) {
+    var treeInfo = data.results;
 
-  console.log(data);
-  console.log('test3');
+    console.log(data);
+  });
+
 });
-
-console.log('test4');
-
 /* search box */
 
 /*
