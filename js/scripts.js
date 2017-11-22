@@ -61,6 +61,9 @@ $('#show-tree').on('click', function(event){
     var treeInfo = data.results;
 
     console.log(data);
+    console.log('yes!');
+
+    $('#put-it-here').append(data);
   });
 
 });
